@@ -127,7 +127,14 @@ public class PlayerController : MonoBehaviour
             resultPos.z = resultPos.y;
             resultPos.y = transform.position.y;
 
+            float width = Screen.width;
+            float height = Screen.height;
+
             resultPos *= InputScaler;
+
+            resultPos.x *= 1080f / width;
+            resultPos.z *= 1920f / height;
+
         }
         else
         {
